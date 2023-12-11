@@ -1,0 +1,90 @@
+:root{
+    --color:#ab26ee;
+    --color2:#2c182f;
+    --color3:#ffffff;
+}
+body{
+    font-family: sans-serif,'Open Sans';
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    background-color: #f9eeff;
+    width: 100%;
+    height: 98vh;
+}
+.container::before{
+    content: "";
+    background-image: url("images/background-pattern-desktop.svg");
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+}
+section{
+    position: relative;
+    top: 150px;
+    background-color: var(--color3,white);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+}
+@media(max-width:576px){
+    section{
+        margin:12px;
+    }
+}
+section .head{
+    display: flex;
+    gap: 25px;
+    margin-top: -10px;
+    margin-bottom: -25px;
+}
+.head h2{
+    font-size: 42px;
+    color: var(--color2,black);
+}
+.txt:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.txt h4{
+    display: flex;
+    align-items: center;
+    color: #2c182fe8;
+    cursor: pointer;
+    position: relative;
+}
+.txt h4::before
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 22px;
+    position: absolute;
+    right: 0;   
+    content: "\f055";  
+    color: var(--color);
+}
+.txt.diff h4::before{
+    content: "\f056";  
+    color: var(--color2);
+}
+.txt h4:hover{
+    color: var(--color);
+}
+.txt.diff p{
+    color: #c4b1c9;
+    font-size: 14px;
+    line-height: 1.4;
+    height: 80px;
+}
+.txt p{
+    color: #c4b1c9;
+    font-size: 14px;
+    line-height: 1.4;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
